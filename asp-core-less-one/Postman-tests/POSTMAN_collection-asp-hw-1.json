@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "cc30fcc4-64e1-4a56-8d36-ca03405c443d",
+		"name": "ASP-hw-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38284753"
+	},
+	"item": [
+		{
+			"name": "GetBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5055/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5055",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetBooks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5055/api/v1/book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5055",
+							"path": [
+								"api",
+								"v1",
+								"book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 13:03:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Great Gatsby\",\n        \"author\": \"F. Scott Fitzgerald\",\n        \"price\": 100\n    },\n    {\n        \"id\": 2,\n        \"title\": \"asd\",\n        \"author\": \"book.Author\",\n        \"price\": 123\n    },\n    {\n        \"id\": 3,\n        \"title\": \"1984\",\n        \"author\": \"George Orwell\",\n        \"price\": 120\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GetBookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5055/api/v1/book/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5055",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:5055/api/v1/book/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5055/api/v1/book/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5055",
+							"path": [
+								"api",
+								"v1",
+								"book",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 12:36:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"The Great Gatsby\",\n    \"author\": \"F. Scott Fitzgerald\",\n    \"price\": 100\n}"
+				}
+			]
+		},
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"test1\",\r\n    \"Author\": \"testAuth1\",\r\n    \"Price\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5055/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5055",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:5055/api/v1/book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"test1\",\r\n    \"Author\": \"testAuth1\",\r\n    \"Price\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5055/api/v1/book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5055",
+							"path": [
+								"api",
+								"v1",
+								"book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 12:46:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"test1\",\n    \"author\": \"testAuth1\",\n    \"price\": 123\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5055/api/v1/book/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5055",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:5055/api/v1/book/1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5055/api/v1/book/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5055",
+							"path": [
+								"api",
+								"v1",
+								"book",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 13:00:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted"
+				}
+			]
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"asd\",\r\n    \"Author\": \"book.Author\",\r\n    \"Price\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5055/api/v1/book/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5055",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UpdateBook",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"asd\",\r\n    \"Author\": \"book.Author\",\r\n    \"Price\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5055/api/v1/book/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5055",
+							"path": [
+								"api",
+								"v1",
+								"book",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 13:03:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"title\": \"asd\",\n    \"author\": \"book.Author\",\n    \"price\": 123\n}"
+				}
+			]
+		}
+	]
+}
